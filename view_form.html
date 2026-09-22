@@ -1,1 +1,164 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guinea Pig Pedigree</title>
+    <link rel="stylesheet" href="view_style.css">
+</head>
+<body>
+<div class="page">
+
+ <header class="brand-header">
+    <img src="logo.jpg" alt="PCBA Logo">
+</header>
+
+    <main class="pedigree-container">
+
+        <section class="subject-section">
+            <div class="section-title">Subject Guinea Pig</div>
+
+            <div class="subject-card">
+                <div class="photo-box">
+                    <img id="subjectPhoto" src="" alt="Guinea Pig">
+                    <div id="photoPlaceholder">Upload Photo</div>
+                    <input type="file" id="photoInput" accept="image/*">
+                </div>
+
+                <div class="subject-fields">
+
+                    <div class="field"><label>Name:</label><input type="text"></div>
+                    <div class="field"><label>Breed:</label><input type="text"></div>
+                    <div class="field"><label>Color/Markings:</label><input type="text"></div>
+                    <div class="field"><label>Sex:</label><input type="text"></div>
+                    <div class="field"><label>Date of Birth:</label><input type="date"></div>
+                    <div class="field"><label>PCBA Ear Tag #:</label><input type="text"></div>
+                    <div class="field"><label>Breeder:</label><input type="text"></div>
+                    <div class="field"><label>Owner:</label><input type="text"></div>
+                    <div class="field"><label>Origin:</label><input type="text"></div>
+
+                </div>
+            </div>
+
+            <div class="notes-box">
+                <label>Notes:</label>
+                <textarea></textarea>
+            </div>
+        </section>
+
+        <section class="generation parents">
+            <div class="generation-title">Parents</div>
+
+            <div class="generation-content">
+                <div class="parent-card" style="margin-top:130px;">
+                    <div class="animal-title">Boar</div>
+                    <div class="animal-fields">
+                           <div class="field"><label>Registration No.:</label><input type="text"></div>
+                        <div class="field"><label>Name:</label><input type="text"></div>
+                        <div class="field"><label>Breed:</label><input type="text"></div>
+                        <div class="field"><label>Color:</label><input type="text"></div>
+                    </div>
+                </div>
+
+                <div class="parent-card" style="margin-top:230px">
+                    <div class="animal-title">Sow</div>
+                    <div class="animal-fields">
+                           <div class="field"><label>Registration No.:</label><input type="text"></div>
+                        <div class="field"><label>Name:</label><input type="text"></div>
+                        <div class="field"><label>Breed:</label><input type="text"></div>
+                        <div class="field"><label>Color:</label><input type="text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="generation grandparents">
+            <div class="generation-title">Grandparents</div>
+
+            <div class="grandparent-content">
+                <div class="grandparent-group">
+                    <div class="animal-card">
+                        <div class="animal-title">Boar</div>
+                        <div class="animal-fields">
+                               <div class="field"><label>Registration No.:</label><input type="text"></div>
+                            <div class="field"><label>Name:</label><input type="text"></div>
+                            <div class="field"><label>Breed:</label><input type="text"></div>
+                            <div class="field"><label>Color:</label><input type="text"></div>
+                        </div>
+                    </div>
+
+                    <div class="animal-card">
+                        <div class="animal-title">Sow</div>
+                        <div class="animal-fields">
+                               <div class="field"><label>Registration No.:</label><input type="text"></div>
+                            <div class="field"><label>Name:</label><input type="text"></div>
+                            <div class="field"><label>Breed:</label><input type="text"></div>
+                            <div class="field"><label>Color:</label><input type="text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grandparent-group">
+                    <div class="animal-card">
+                        <div class="animal-title">Boar</div>
+                        <div class="animal-fields">
+                               <div class="field"><label>Registration No.:</label><input type="text"></div>
+                            <div class="field"><label>Name:</label><input type="text"></div>
+                            <div class="field"><label>Breed:</label><input type="text"></div>
+                            <div class="field"><label>Color:</label><input type="text"></div>
+                         
+                        </div>
+                    </div>
+
+                    <div class="animal-card">
+                        <div class="animal-title">Sow</div>
+                        <div class="animal-fields">
+                               <div class="field"><label>Registration No.:</label><input type="text"></div>
+                            <div class="field"><label>Name:</label><input type="text"></div>
+                            <div class="field"><label>Breed:</label><input type="text"></div>
+                            <div class="field"><label>Color:</label><input type="text"></div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  <section class="generation great-grandparents">
+            <div class="generation-title">Great Grandparents</div>
+
+            <div class="great-content">
+                <div class="great-group"  style="MARGIN-TOP: 60PX;">
+                    <div class="great-card"><div class="field"><label>Boar:</label><input type="text"></div></div>
+                    <div class="great-card"><div class="field"><label>Sow:</label><input type="text"></div></div>
+                </div>
+
+                <div class="great-group" style="MARGIN-TOP: 80PX;">
+                <div class="great-card"><div class="field"><label>Boar:</label><input type="text"></div></div>
+                    <div class="great-card"><div class="field"><label>Sow:</label><input type="text"></div></div> 
+                </div>
+
+                <div class="great-group" style="MARGIN-TOP: 110PX;">
+                   <div class="great-card"><div class="field"><label>Boar:</label><input type="text"></div></div>
+                    <div class="great-card"><div class="field"><label>Sow:</label><input type="text"></div></div>
+                </div>
+
+                <div class="great-group"style="MARGIN-TOP: 80PX;">
+                    <div class="great-card"><div class="field"><label>Boar:</label><input type="text"></div></div>
+                    <div class="great-card"><div class="field"><label>Sow:</label><input type="text"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+</div>
+
+<!-- <div class="actions">
+    <button type="button" onclick="printPedigree()">Print Pedigree</button>
+    <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+</div> -->
+
+<script src="script.js"></script>
+</body>
+</html>
