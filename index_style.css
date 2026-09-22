@@ -1,1 +1,673 @@
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #e9e9e9;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ========================================
+   MAIN PAGE
+======================================== */
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+
+    background: #f8f9ed;
+
+    border: 5px solid #d4ad35;
+
+    box-shadow:
+        0 0 0 3px #034d27,
+        0 8px 25px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.brand-header {
+    width: 100%;
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid #153f28;
+}
+
+.brand-header img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* ========================================
+   PEDIGREE CONTAINER
+======================================== */
+
+.pedigree-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 1.15fr;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   SECTION TITLES
+======================================== */
+
+.section-title,
+.generation-title {
+    margin-bottom: 20px;
+    padding: 8px 12px;
+
+    background: #006039;
+
+    border: 2px solid #d4ad35;
+    border-radius: 22px;
+
+    color: #fff;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow:
+        inset 0 0 0 1px #003b24;
+}
+
+
+/* ========================================
+   SUBJECT
+======================================== */
+
+.subject-card {
+    width: 100%;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.4);
+
+    border: 2px solid #d0ad49;
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   PHOTO
+======================================== */
+
+.photo-box {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #e6ead9;
+
+    border: 3px solid #557d27;
+    border-radius: 10px;
+}
+
+.photo-box img {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+#photoPlaceholder {
+    color: #46683d;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+#photoInput {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   SUBJECT FIELDS
+======================================== */
+
+.subject-fields {
+    width: 100%;
+
+    margin-top: 10px;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   FORM FIELDS
+======================================== */
+
+.field {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: auto minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 7px 0;
+}
+
+.field label {
+    white-space: nowrap;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 3px 2px;
+
+    background: transparent;
+
+    border: 0;
+    border-bottom: 1px solid #777;
+
+    outline: none;
+
+    color: #111;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-bottom: 2px solid #006039;
+}
+
+
+/* ========================================
+   NOTES
+======================================== */
+
+.notes-box {
+    width: 100%;
+
+    min-height: 140px;
+
+    margin-top: 20px;
+    padding: 10px 15px;
+
+    border: 2px solid #222;
+    border-radius: 12px;
+
+    font-size: 12px;
+}
+
+.notes-box label {
+    font-weight: bold;
+}
+
+.notes-box textarea {
+    width: 100%;
+
+    min-height: 90px;
+
+    resize: vertical;
+
+    border: 0;
+    outline: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 25px,
+            #aaa 26px
+        );
+}
+
+
+/* ========================================
+   GENERATION
+======================================== */
+
+.generation {
+    width: 100%;
+}
+
+.generation-content {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   PARENT CARDS
+======================================== */
+
+.parent-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    border: 2px solid #1c1c1c;
+    border-radius: 15px;
+}
+
+
+/* ========================================
+   ANIMAL TITLE
+======================================== */
+
+.animal-title {
+    padding: 5px;
+
+    background: #006039;
+
+    color: #fff;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   ANIMAL FIELDS
+======================================== */
+
+.animal-fields {
+    width: 100%;
+
+    padding: 8px;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   TABLET
+   1100px AND BELOW
+======================================== */
+
+@media (max-width: 1100px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+
+    /* HEADER */
+
+    .brand-header {
+        margin-bottom: 20px;
+    }
+
+
+    /* PEDIGREE */
+
+    .pedigree-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+        margin-top: 20px;
+    }
+
+
+    /* SUBJECT */
+
+    .subject-section {
+        grid-column: span 2;
+    }
+
+
+    /* PARENTS */
+
+    .generation-content {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+   700px AND BELOW
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 5px;
+    }
+
+    .page {
+        padding: 10px;
+
+        border-width: 4px;
+    }
+
+
+    /* HEADER */
+
+    .brand-header {
+        margin-bottom: 15px;
+    }
+
+    .brand-header img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* PEDIGREE */
+
+    .pedigree-container {
+        display: block;
+
+        margin-top: 15px;
+    }
+
+
+    .subject-section,
+    .generation {
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* SECTION TITLES */
+
+    .section-title,
+    .generation-title {
+        margin-bottom: 15px;
+
+        font-size: 19px;
+    }
+
+
+    /* SUBJECT */
+
+    .subject-card {
+        padding: 10px;
+    }
+
+
+    /* PHOTO */
+
+    .photo-box {
+        height: 230px;
+    }
+
+
+    /* FORM */
+
+    .field {
+        grid-template-columns: 1fr;
+
+        gap: 2px;
+
+        margin: 9px 0;
+    }
+
+    .field label {
+        font-size: 14px;
+
+        font-weight: bold;
+    }
+
+    .field input,
+    .field textarea {
+        padding: 5px 2px;
+
+        font-size: 16px;
+    }
+
+
+    /* PARENTS */
+
+    .generation-content {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    /* ANIMAL */
+
+    .animal-title {
+        font-size: 18px;
+    }
+
+
+    /* NOTES */
+
+    .notes-box {
+        min-height: 120px;
+
+        padding: 10px;
+    }
+
+    .notes-box textarea {
+        min-height: 80px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONE
+   400px AND BELOW
+======================================== */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 3px;
+    }
+
+    .page {
+        padding: 7px;
+
+        border-width: 3px;
+    }
+
+
+    /* HEADER */
+
+    .brand-header {
+        margin-bottom: 12px;
+    }
+
+
+    /* TITLES */
+
+    .section-title,
+    .generation-title {
+        padding: 7px 8px;
+
+        font-size: 17px;
+    }
+
+
+    /* PHOTO */
+
+    .photo-box {
+        height: 200px;
+    }
+
+
+    /* FORM */
+
+    .field label {
+        font-size: 13px;
+    }
+
+    .field input,
+    .field textarea {
+        font-size: 15px;
+    }
+
+
+    /* ANIMAL */
+
+    .animal-title {
+        font-size: 17px;
+    }
+
+    .animal-fields {
+        padding: 7px;
+    }
+
+
+    /* NOTES */
+
+    .notes-box {
+        padding: 8px;
+    }
+
+}
+
+
+/* ========================================
+   PRINT
+======================================== */
+
+@media print {
+
+    body {
+        padding: 0;
+
+        background: #fff;
+    }
+
+    .page {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+        padding: 10px;
+
+        border: 0;
+
+        box-shadow: none;
+    }
+
+
+    /* HEADER */
+
+    .brand-header {
+        width: 100%;
+
+        margin-bottom: 15px;
+
+        border-bottom: 1px solid #153f28;
+    }
+
+    .brand-header img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* CONTENT */
+
+    .pedigree-container {
+        margin-top: 15px;
+
+        gap: 15px;
+    }
+
+
+    /* FORM */
+
+    input,
+    textarea {
+        color: #000;
+    }
+
+
+    /* PAPER */
+
+    @page {
+        size: A4 landscape;
+
+        margin: 5mm;
+    }
+
+}
+
